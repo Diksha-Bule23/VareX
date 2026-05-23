@@ -735,48 +735,170 @@ html {
   cursor: pointer;
 }
 
+/* ========================================= */
+/* PREMIUM MOBILE NAVBAR */
+/* ========================================= */
+
+.menu-toggle {
+  display: none;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
 
   .navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 15px 20px;
+    padding: 14px 20px;
+
+    background: rgba(0,0,0,0.55);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 1000;
   }
 
   .logo {
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
   }
 
   .menu-toggle {
-    display: block;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.08);
+
+    font-size: 24px;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+  }
+
+  .menu-toggle:hover {
+    background: rgba(255,255,255,0.15);
   }
 
   .nav-links {
-    position: absolute;
+    position: fixed;
 
-    top: 70px;
-    right: 50px;
+    top: 80px;
+    right: -100%;
 
-    width: 220px;
+    width: 240px;
 
-    background: rgba(0,0,0,0.95);
-
+    display: flex;
     flex-direction: column;
 
-    text-align: center;
+    gap: 25px;
 
-    padding: 20px 0;
+    padding: 35px 25px;
 
-    gap: 20px;
+    background: rgba(15,15,15,0.95);
 
-    display: none;
+    backdrop-filter: blur(20px);
+
+    border-radius: 20px 0 0 20px;
+
+    transition: 0.4s ease;
+
+    box-shadow:
+      0 0 20px rgba(0,0,0,0.5);
+
+    z-index: 999;
   }
 
   .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+}
+/* ========================================= */
+/* PREMIUM HERO MOBILE */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 100vh;
+
+    padding: 120px 20px 80px;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-text {
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    text-shadow:
+      0 0 15px rgba(168,85,247,0.4),
+      0 0 30px rgba(59,130,246,0.3);
+  }
+
+  .hero-subtext {
+    margin-top: 18px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.82);
+
+    max-width: 95%;
+  }
+
+  .hero-btn {
+    margin-top: 35px;
+
+    padding: 15px 34px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    border-radius: 50px;
+
+    box-shadow:
+      0 0 20px rgba(0,198,255,0.4);
   }
 
 }
