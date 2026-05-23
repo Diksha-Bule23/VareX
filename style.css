@@ -831,7 +831,7 @@ html {
   }
 
   .nav-links.active {
-    right: 0;
+    right: 40px;
   }
 
   .nav-links a {
