@@ -1,4 +1,11 @@
 * {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -109,14 +116,32 @@ header p {
     z-index: 2;
 }
 /* Services Section */
+/* ===== SERVICES RESPONSIVE ===== */
+
 .services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1300px;
+  margin: auto;
 }
 
+/* TABLET */
+@media (max-width: 992px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .services {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
 /* Service Cards */
 .services-box {
   position: relative;
@@ -134,7 +159,10 @@ header p {
   text-align: left;
 }
 
-
+.services-box {
+  width: 100%;
+  min-height: 320px;
+}
 .services-box h2 {
 margin-bottom: 12px; 
 color: #333;
@@ -572,4 +600,73 @@ font-weight: bold;
   border-top: 1px solid #222;
   padding-top: 15px;
   font-size: 14px;
+}
+/* ===== MOBILE NAVBAR ===== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-right: 0;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+}
+/* ===== HEADER RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 140px 20px 80px;
+  }
+
+  header h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  header p {
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+}
+@media (max-width: 600px) {
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+/* ===== FOOTER RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-box {
+    min-width: 100%;
+  }
+
 }
