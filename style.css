@@ -843,62 +843,122 @@ html {
 /* ========================================= */
 /* PREMIUM HERO MOBILE */
 /* ========================================= */
+/* =========================
+   MODERN MOBILE NAVBAR
+========================= */
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
 
-  .hero {
-    min-height: 100vh;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    padding: 120px 20px 80px;
+    padding: 15px 20px;
+
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* LOGO */
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /* HAMBURGER LEFT SIDE */
+  .menu-toggle {
+    display: block;
+    order: -1; /* moves icon to left */
+  }
+
+  /* MENU */
+  .nav-links {
+    position: absolute;
+
+    top: 75px;
+    left: 20px;
+    right: 20px;
+
+    background: rgba(15,15,15,0.98);
+
+    border-radius: 20px;
+
+    padding: 20px;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 18px;
 
     text-align: center;
 
-    background-position: center;
-    background-size: cover;
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-20px);
+
+    transition: 0.4s ease;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  }
+
+  /* SHOW MENU */
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    font-weight: 500;
+
+    padding: 12px;
+    border-radius: 12px;
+
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    background: #00c3ff;
+    color: black;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 140px 20px 80px;
+    min-height: 100vh;
   }
 
   .hero-text {
     font-size: 48px;
-
-    line-height: 1.05;
-
-    font-weight: 800;
-
-    letter-spacing: -1px;
-
-    text-shadow:
-      0 0 15px rgba(168,85,247,0.4),
-      0 0 30px rgba(59,130,246,0.3);
+    line-height: 1.15;
   }
 
   .hero-subtext {
-    margin-top: 18px;
-
-    font-size: 17px;
-
+    font-size: 20px;
     line-height: 1.7;
 
-    color: rgba(255,255,255,0.82);
-
-    max-width: 95%;
+    margin-top: 20px;
   }
 
   .hero-btn {
     margin-top: 35px;
 
-    padding: 15px 34px;
+    font-size: 22px;
 
-    font-size: 18px;
-    font-weight: 700;
+    padding: 18px 45px;
 
     border-radius: 50px;
-
-    box-shadow:
-      0 0 20px rgba(0,198,255,0.4);
   }
-
 }
