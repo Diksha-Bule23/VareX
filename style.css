@@ -908,3 +908,52 @@ html {
     color: black;
   }
 }
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .navbar{
+    position: relative;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* LOGO CENTER */
+  .logo{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  /* HAMBURGER LEFT SIDE */
+  .menu-toggle{
+    display: block;
+    position: absolute;
+    left: 15px;   /* 🔥 LEFT SIDE */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* HIDE MENU */
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  /* SHOW MENU */
+  .nav-links.active{
+    display: flex;
+  }
+
+}
