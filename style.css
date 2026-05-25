@@ -777,76 +777,42 @@ html {
   display: none;
 }
 
-/* MOBILE VIEW */
-@media (max-width: 768px) {
+/* MOBILE */
 
-  .navbar{
-    position: relative;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+@media(max-width:768px){
 
-  /* LOGO CENTER */
-  .logo{
-    font-size: 18px;
-    text-align: center;
-  }
-
-  /* HAMBURGER LEFT SIDE */
   .menu-toggle{
-    display: block;
-    position: absolute;
-    left: 15px;   /* 🔥 LEFT SIDE */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
+    display:block;
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:28px;
+    cursor:pointer;
   }
+
+  .logo{
+    font-size:18px;
+    margin:auto;
+  }
+
   .nav-links{
-    display: none;
-    flex-direction: column;
+    display:none;
+    flex-direction:column;
 
-    position: absolute;
-    top: 40px;
+    position:absolute;
+    top:70px;
+    left:0;
 
-    left: 0;        /* 🔥 OPEN FROM LEFT */
-    right: auto;
+    width:220px;
+    height:100vh;
 
-    width: 150px;
-    height: 30vh;
-
-    background: rgba(0,0,0,0.95);
-
-    padding: 30px 20px;
-    gap: 25px;
-
-    align-items: flex-start;
-    text-align: left;
-
-    border-right: 2px solid #00c3ff;
-
-    animation: slideLeft 0.3s ease;
+    background:#000;
+    padding:30px 20px;
   }
 
   .nav-links.active{
-    display: flex;
+    display:flex;
   }
 
-}
-
-/* SLIDE ANIMATION */
-@keyframes slideLeft{
-  from{
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  to{
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
