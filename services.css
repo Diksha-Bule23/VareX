@@ -230,9 +230,11 @@ font-weight: bold;
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
-  margin-right: 20px;
-    flex-wrap: nowrap;
+  gap: 15px;
+  margin:0;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
 }
 
 .nav-links li {
@@ -242,7 +244,7 @@ font-weight: bold;
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
@@ -257,6 +259,7 @@ font-weight: bold;
   align-items: center;
   padding: 15px 30px;
   background: rgba(0, 0, 0, 0.6); /* transparent effect */
+  backdrop-filter: blur(10px);
   z-index: 1000; /* VERY IMPORTANT */
   box-sizing: border-box;
 }
@@ -669,4 +672,51 @@ font-weight: bold;
     min-width: 100%;
   }
 
+}
+
+
+/* =========================
+   DESKTOP NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 40px;
+
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* DESKTOP MENU */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00c3ff;
 }
