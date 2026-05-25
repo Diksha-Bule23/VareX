@@ -724,6 +724,69 @@ html {
     min-width: 100%;
   }
 }
+@media (max-width: 768px) {
+
+  .navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 14px 20px;
+
+    background: rgba(0,0,0,0.55);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 1000;
+  }
+
+  /* HAMBURGER ICON LEFT */
+  .menu-toggle {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.08);
+
+    font-size: 24px;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin-right: 15px;   /* SPACE BETWEEN ICON & LOGO */
+  }
+
+  /* LOGO */
+  .logo {
+    font-size: 17px;
+    font-weight: 700;
+
+    margin: 0;
+  }
+
+
+}
+
+  .menu-toggle:hover {
+    background: rgba(255,255,255,0.15);
+  }
 /* =========================
    DESKTOP NAVBAR
 ========================= */
@@ -776,7 +839,7 @@ html {
 }
 
 /* =========================
-   MOBILE NAVBAR
+   MOBILE ONLY
 ========================= */
 
 @media (max-width: 768px) {
@@ -785,7 +848,11 @@ html {
     padding: 15px 20px;
   }
 
-  /* SHOW HAMBURGER */
+  .logo {
+    font-size: 18px;
+  }
+
+  /* SHOW HAMBURGER ONLY IN MOBILE */
   .menu-toggle {
     display: block;
     font-size: 28px;
@@ -794,7 +861,7 @@ html {
     order: -1;
   }
 
-  /* MOBILE MENU */
+  /* HIDE MENU INITIALLY */
   .nav-links {
     position: absolute;
 
@@ -805,6 +872,7 @@ html {
     background: rgba(10,10,10,0.97);
 
     flex-direction: column;
+
     text-align: center;
 
     padding: 20px;
@@ -821,7 +889,7 @@ html {
     transition: 0.4s ease;
   }
 
-  /* SHOW MENU */
+  /* SHOW WHEN CLICK */
   .nav-links.active {
     opacity: 1;
     visibility: visible;
@@ -838,20 +906,5 @@ html {
   .nav-links a:hover {
     background: #00c3ff;
     color: black;
-  }
-
-  /* HERO */
-  .hero {
-    padding: 130px 20px 80px;
-  }
-
-  .hero-text {
-    font-size: 50px;
-    line-height: 1.1;
-  }
-
-  .hero-subtext {
-    font-size: 22px;
-    margin-top: 20px;
   }
 }
