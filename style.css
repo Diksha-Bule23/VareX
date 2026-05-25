@@ -846,5 +846,13 @@ html {
     color:#00c3ff;
     transform:translateX(10px);
   }
-
+.nav-links::before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:-100%;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.5);
+}
 }
