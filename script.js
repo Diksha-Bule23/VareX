@@ -1,17 +1,5 @@
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-const overlay = document.querySelector(".overlay");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  overlay.classList.toggle("active");
-});
-
-overlay.addEventListener("click", () => {
-  navLinks.classList.remove("active");
-  overlay.classList.remove("active");
-});const navItems = document.querySelectorAll(".nav-links a");
+const navItems = document.querySelectorAll(".nav-links a");
 
 navItems.forEach(link => {
   link.addEventListener("click", () => {
