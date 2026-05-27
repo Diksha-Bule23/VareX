@@ -189,33 +189,282 @@ header p{
 
 /* BUTTON */
 
-.btn{
-  display:inline-block;
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    border-radius: 30px;
 
-  margin-top:20px;
-  padding:12px 28px;
+    color: #00e5ff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
 
-  border-radius:30px;
+    border: 2px solid #00e5ff;
+    background: transparent;
 
-  color:#00e5ff;
-  text-decoration:none;
+    position: relative;
+    overflow: hidden;
 
-  border:2px solid #00e5ff;
+    transition: 0.4s;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
 
-  transition:0.4s;
+    background: linear-gradient(90deg, #00e5ff, #007BFF);
+    transition: 0.4s;
+    z-index: -1;
 }
 
-.btn:hover{
-  background:#00c3ff;
-  color:white;
+.btn:hover::before {
+    left: 0;
+}
+.btn:hover {
+    color: white;
+    box-shadow: 
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #007BFF;
 
-  transform:scale(1.05);
-
-  box-shadow:
-  0 0 10px #00e5ff,
-  0 0 20px #007BFF;
+    transform: scale(1.05);
+}
+.btn {
+    animation: pulseGlow 2s infinite;
 }
 
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 5px #00e5ff;
+    }
+    50% {
+        box-shadow: 0 0 20px #00e5ff;
+    }
+    100% {
+        box-shadow: 0 0 5px #00e5ff;
+    }
+}
+
+
+.web-card {
+  background: url("images/web-bg.jpg") no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.web-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* keep text visible */
+.web-card h3,
+.web-card p {
+  position: relative;
+  z-index: 1;
+}
+.web-card:hover::before {
+    left: 0;
+}
+.web-card:hover {
+    color: white;
+    box-shadow: 
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #007BFF;
+
+    transform: scale(1.05);
+}
+.web-card {
+    animation: pulseGlow 2s infinite;
+}
+
+
+.android-card {
+  background: url("images/android.jpg") no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.android-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* keep text visible */
+.android-card h3,
+.android-card p {
+  position: relative;
+  z-index: 1;
+}
+.android-card:hover::before {
+    left: 0;
+}
+.android-card:hover {
+    color: white;
+    box-shadow: 
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #007BFF;
+
+    transform: scale(1.05);
+}
+.android-card {
+    animation: pulseGlow 2s infinite;
+}
+.cloud-card {
+  background: url("images/cloud.jpg") no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.cloud-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* keep text visible */
+.cloud-card h3,
+.cloud-card p {
+  position: relative;
+  z-index: 1;
+}
+.cloud-card:hover {
+    color: white;
+    box-shadow: 
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #007BFF;
+
+    transform: scale(1.05);
+}
+.cloud-card {
+    animation: pulseGlow 2s infinite;
+}
+.rpa-card {
+  background: url("images/rpa.jpg") no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.rpa-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* keep text visible */
+.rpa-card h3,
+.rpa-card p {
+  position: relative;
+  z-index: 1;
+}
+.rpa-card:hover::before {
+    left: 0;
+}
+.rpa-card:hover {
+    color: white;
+    box-shadow: 
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #007BFF;
+
+    transform: scale(1.05);
+}
+.rpa-card {
+    animation: pulseGlow 2s infinite;
+}
+.qa-card {
+  background: url("images/qa.jpg") no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.qa-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* keep text visible */
+.qa-card h3,
+.qa-card p {
+  position: relative;
+  z-index: 1;
+}
+.qa-card:hover::before {
+    left: 0;
+}
+.qa-card:hover {
+    color: white;
+    box-shadow: 
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #007BFF;
+
+    transform: scale(1.05);
+}
+.qa-card {
+    animation: pulseGlow 2s infinite;
+}
+.software-card {
+  background: url("images/software.jpg") no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.software-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* keep text visible */
+.software-card h3,
+.software-card p {
+  position: relative;
+  z-index: 1;
+}
+.software-card:hover::before {
+    left: 0;
+}
+.software-card:hover {
+    color: white;
+    box-shadow: 
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #007BFF;
+
+    transform: scale(1.05);
+}
+.software-card {
+    animation: pulseGlow 2s infinite;
+}
 /* =========================
    FOOTER
 ========================= */
@@ -238,6 +487,7 @@ header p{
 .footer-box{
   flex:1;
   min-width:250px;
+   font-size: 16px;
 }
 
 .footer-box h2,
@@ -248,7 +498,12 @@ header p{
 
 .footer-box p{
   margin:8px 0;
-  line-height:2;
+  line-height:2.0;
+}
+
+.footer-box i {
+  margin-right: 8px;
+  color: #00f7ff;
 }
 
 .footer-box a{
