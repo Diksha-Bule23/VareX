@@ -793,23 +793,31 @@ html {
   }
 
   .menu-toggle {
-    font-size: 32px;
+    display:block;
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:28px;
+    cursor:pointer;
     color: white;
-    cursor: pointer;
-    z-index: 1100;
   }
 
+  .logo{
+    font-size:18px;
+    margin:auto;
+  }
   /* Sidebar Menu */
   .nav-links {
-    position: fixed;
-    top: 0;
-    left: -250px;   /* hidden by default */
-    width: 250px;
+    position: absolute;
+    top: 70px;
+    left: 0;   /* hidden by default */
+    width: 220px;
     height: 100vh;
     background: #000;
-    display: flex;
+    display: none;
     flex-direction: column;
-    padding-top: 100px;
+    padding: 30px 20px;
     transition: 0.4s ease;
     z-index: 1000;
   }
@@ -817,6 +825,7 @@ html {
   /* Active Menu */
   .nav-links.active {
     left: 0;
+    display:flex;
   }
 
   .nav-links a {
